@@ -1,6 +1,14 @@
 // Problem #1 //
-function getIncompleteTasks(){
-    
+function getIncompleteTasks(tasks, output =[]){
+    //base
+    if (array.length === 0){
+        return output;
+    }
+    //recursion
+    if (array[0].completed === false){
+        output.push(array[0]);
+    }
+    return getIncompleteTasks(array.slice(1), output);
 }
 // Problem #2 //
 function mapTasks(){
